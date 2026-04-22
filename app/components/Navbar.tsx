@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Page() {
   return (
     <div className="">
-      <nav className="fixed top-0 w-full flex items-center justify-around py-5 px-24 bg-black z-10">
+      <nav className="fixed top-0 w-full flex items-center justify-around py-5 px-24 bg-black z-50">
         <div className="border-b-2 border-b-gray-700 w-[80%] flex items-center justify-between">
         <Link href="/" className="transition duration-300 hover:scale-110">
           <Image
