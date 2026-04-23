@@ -1,5 +1,6 @@
 import HeroSection from "@/components/hero";
 import WhyChooseSection from "@/components/why-choose";
+import FAQSection from "@/components/faq";
 
 export default function HomePage() {
   return (
@@ -9,6 +10,9 @@ export default function HomePage() {
 
       {/* Why Choose Section */}
       <WhyChooseSection />
+
+      {/* FAQ Section */}
+      <FAQSection />
     </main>
   );
 }

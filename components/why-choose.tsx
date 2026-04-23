@@ -9,11 +9,11 @@ export default function WhyChooseSection() {
       <div className="max-w-10/12 flex flex-col flex-1 grid-cols-2 gap-10 relative">
         <div className="flex absolute top-2 left-40">
           <div className="text-5xl font-bold top-0 left-0 w-full h-full">
-            <div className="flex relative">Why Choose</div>
-            <div className="flex relative left-44">LuxeAuto for</div>
-            <div className="flex relative">Ultimate Luxury</div>
+            <div className="flex relative mb-2">Why Choose</div>
+            <div className="flex relative mb-2 left-44">LuxeAuto for</div>
+            <div className="flex relative mb-2">Ultimate Luxury</div>
             <div className="max-w-2xs mt-6 flex relative left-72">
-              <p className="text-xs font-medium text-zinc-400">
+              <p className="text-xs font-semibold text-zinc-200/70">
                 Experiencing unmatched quality, performance, and luxury - every
                 detail is verified to diliver a flawless driving experience.
               </p>
