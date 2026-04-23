@@ -5,7 +5,47 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const QandA = [{ title: "/", subtitle: "" }];
+const QandA = [
+  {
+    question: "Is it accessible?",
+    answer: "Yes. It adheres to the WAI-ARIA design pattern.",
+  },
+  {
+    question:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. met iste, explicabo quasi vel unde eveniet ducimus natus ?",
+    answer:
+      "Omnimet iste, explicabo quasi vel unde eveniet ducimus natus, ipsa eos repudiandae inventore voluptatum quo. Magni, nam.",
+  },
+  {
+    question:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. met iste, explicabo quasi vel ?",
+    answer:
+      "Omnimet iste, explicabo quasi vel unde eveniet ducimus natus, ipsa eos repudiandae inventore voluptatum quo. Magni, explicabo quasi vel unde eveniet ducimus natus, nam.",
+  },
+  {
+    question:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. met iste ?",
+    answer: "Omnimet iste",
+  },
+  {
+    question:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. met iste, explicabo ?",
+    answer:
+      "Omnimet iste, explicabo quasi vel unde eveniet ducimus natus, ipsa eos repudiandae inventore voluptatum quo. Magni, nam.",
+  },
+  {
+    question:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. met iste, explicabo quasi ?",
+    answer:
+      "Omnimet iste, explicabo quasi vel unde eveniet ducimus natus, nam.",
+  },
+  {
+    question:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. met iste, explicabo quasi vel unde eveniet ducimus natus ?",
+    answer:
+      "Omnimet iste, explicabo quasi vel unde eveniet ducimus natus, ipsa eos voluptatum quo. Magni, nam.",
+  },
+];
 
 export default function FAQSection() {
   return (
@@ -28,17 +68,17 @@ export default function FAQSection() {
           </div>
         </div>
       </div>
-      <div className="flex absolute items-center justify-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <div className="p-4 border-transparent border-default rounded-xl block bg-zinc-800 w-7xl">
-          <Accordion>
-            <AccordionItem value="item-1">
-              <AccordionTrigger>Is it accessible?</AccordionTrigger>
-              <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div>
+      <div className="flex flex-col gap-2 absolute items-center justify-center top-3/5 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        {QandA.map((qa) => (
+          <div className="p-4 border-transparent border-default rounded-xl block bg-zinc-800 w-7xl">
+            <Accordion>
+              <AccordionItem value="item-1">
+                <AccordionTrigger><h5 className="text-zinc-300">{qa.question}</h5></AccordionTrigger>
+                <AccordionContent>{qa.answer}</AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        ))}
       </div>
     </section>
   );

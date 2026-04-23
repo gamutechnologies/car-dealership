@@ -11,7 +11,7 @@ const MenuItems = [
   { label: "Contact", link: "/contact" },
 ];
 
-export default function Page() {
+export default function Navbar() {
   return (
     <div className="">
       <nav className="fixed top-0 w-full flex items-center justify-around py-4 px-24 bg-black/30 backdrop-blur-md z-50">
