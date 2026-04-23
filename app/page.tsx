@@ -1,7 +1,9 @@
-import HeroSection from "@/components/hero";
-import WhyChooseSection from "@/components/why-choose";
-import BrowseCarsSection from "@/components/browse-cars";
-import FAQSection from "@/components/faq";
+import HeroSection from "@/components/home-page/hero";
+import OurExclusiveSection from "@/components/home-page/our-exclusive";
+import WhyChooseSection from "@/components/home-page/why-choose";
+import BrowseCarsSection from "@/components/home-page/browse-cars";
+import TestimonialsSection from "@/components/home-page/testimonials";
+import FAQSection from "@/components/home-page/faq";
 
 export default function HomePage() {
   return (
@@ -10,17 +12,19 @@ export default function HomePage() {
       <HeroSection />
 
       {/*Our Exclusive Section */}
+      <OurExclusiveSection />
 
       {/* Why Choose Section */}
-      <WhyChooseSection />
+      {/* <WhyChooseSection /> */}
 
       {/* Browse Cars Section */}
-      <BrowseCarsSection />
+      {/* <BrowseCarsSection /> */}
 
       {/* Testimonials Section */}
+      {/* <TestimonialsSection /> */}
 
       {/* FAQ Section */}
-      <FAQSection />
+      {/* <FAQSection /> */}
     </main>
   );
 }
