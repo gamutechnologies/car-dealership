@@ -1,83 +1,49 @@
 import Link from "next/link";
-import { MenuIcon } from "lucide-react";
+import { EqualIcon } from "lucide-react";
 import Image from "next/image";
 
+
+const MenuItems = [
+  { label: "Home", link: "/" },
+  { label: "Inventory", link: "/inventory" },
+  { label: "About", link: "/about" },
+  { label: "Service", link: "/service" },
+  { label: "Contact", link: "/contact" },
+];
 
 export default function Page() {
   return (
     <div className="">
-      <nav className="fixed top-0 w-full flex items-center justify-around py-5 px-24 bg-black z-50">
-        <div className="border-b-2 border-b-gray-700 w-[80%] flex items-center justify-between">
-        <Link href="/" className="transition duration-300 hover:scale-110">
-          <Image
-            src="/logo-header.svg"
-            alt="Logo"
-            width={150}
-            height={50}
-            className="object-contain"
-          />
-        </Link>
-
-        <ul className="flex gap-10 text-lg">
-          <Link
-            href="/"
-            className="text-gray-300 hover:text-white transition-colors"
-          >
-            Home
+      <nav className="fixed top-0 w-full flex items-center justify-around py-4 px-24 bg-black/30 backdrop-blur-md z-50">
+        <div className="border-b-2 border-b-zinc-700 w-[80%] flex items-center justify-between">
+          <Link href="/" className="transition duration-300 hover:scale-110">
+            <Image
+              src="/logo-header.svg"
+              alt="Logo"
+              width={150}
+              height={50}
+              className="object-contain"
+            />
           </Link>
-          <Link
-            href="/about"
-            className="text-gray-300 hover:text-white transition-colors"
-          >
-            About
+          <div className="flex items-center gap-20">
+          <ul className="flex gap-10 text-lg">
+            {MenuItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.link}
+                className="text-zinc-500 hover:text-white transition duration-300 hover:scale-110"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </ul>
+          <Link href="/" className="transition duration-300 hover:scale-110">
+            <EqualIcon width="48" height="48" className="text-zinc-400 hover:text-white font-extralight transition duration-300 hover:scale-110" />
           </Link>
-          <Link
-            href="/inventory"
-            className="text-gray-300 hover:text-white transition-colors"
-          >
-            Inventory
-          </Link>
-          <Link
-            href="/service"
-            className="text-gray-300 hover:text-white transition-colors"
-          >
-            Service
-          </Link>
-          <Link
-            href="/contact"
-            className="text-gray-300 hover:text-white transition-colors"
-          >
-            Contact
-          </Link>
-        </ul>
-        <Link href="/" className="transition duration-300 hover:scale-110">
-          <MenuIcon className="text-gray-300 hover:text-white" />
-        </Link>
+          </div>
         </div>
       </nav>
     </div>
   );
 }
 
-const MenuItems = [
-  {
-    label: "Home",
-    link: "/"
-  },
-  {
-    label: "About",
-    link: "/about"
-  },
-  {
-    label: "Inventory",
-    link: "/inventory"
-  },
-  {
-    label: "Service",
-    link: "/service"
-  },
-  {
-    label: "Contact",
-    link: "/contact"
-  },
-]

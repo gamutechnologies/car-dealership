@@ -3,7 +3,7 @@ import { MoveUpRightIcon } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-linear-to-b from-black from-15% via-gray-400/60 via-50% to-black to-110%">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-linear-to-b from-black from-15% via-gray-400/30 via-50% to-black to-110%">
       <div className="w-full flex flex-col flex-1 items-center justify-center text-center gap-10 relative">
         <h1 className="absolute -top-[18%] font-extrabold text-[242px] mt-10">
           LUXURY CAR
@@ -25,13 +25,14 @@ export default function HeroSection() {
             who demand elegance, performance, and distinction in every drive.
           </p>
           <div className="flex grid-cols-2 gap-4 mt-6">
-          <button className="bg-yellow-500 border border-black rounded-full text-black px-3 py-2 align-middle flex items-center gap-2">
-            Browse Collection <MoveUpRightIcon />
-          </button>
+            <button className="bg-yellow-500 border border-black rounded-full text-black px-3 py-2 align-middle flex items-center gap-2">
+              Browse Collection <MoveUpRightIcon />
+            </button>
             <button className="bg-transparent border border-yellow-500 rounded-full text-white px-3 py-2 align-middle flex items-center gap-2">
-            Book Test Drive
-            <MoveUpRightIcon color="#eab308"/>
-          </button></div>
+              Book Test Drive
+              <MoveUpRightIcon color="#eab308" />
+            </button>
+          </div>
         </div>
       </div>
     </section>
