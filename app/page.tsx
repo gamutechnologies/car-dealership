@@ -15,16 +15,16 @@ export default function HomePage() {
       <OurExclusiveSection />
 
       {/* Why Choose Section */}
-      {/* <WhyChooseSection /> */}
+      <WhyChooseSection />
 
       {/* Browse Cars Section */}
-      {/* <BrowseCarsSection /> */}
+      <BrowseCarsSection />
 
       {/* Testimonials Section */}
-      {/* <TestimonialsSection /> */}
+      <TestimonialsSection />
 
       {/* FAQ Section */}
-      {/* <FAQSection /> */}
+      <FAQSection />
     </main>
   );
 }
