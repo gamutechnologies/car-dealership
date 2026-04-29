@@ -2,7 +2,6 @@ import Link from "next/link";
 import { EqualIcon } from "lucide-react";
 import Image from "next/image";
 
-
 const MenuItems = [
   { label: "Home", link: "/" },
   { label: "Inventory", link: "/inventory" },
@@ -26,24 +25,27 @@ export default function Navbar() {
             />
           </Link>
           <div className="flex items-center gap-20">
-          <ul className="flex gap-10 text-lg">
-            {MenuItems.map((item) => (
-              <Link
-                key={item.label}
-                href={item.link}
-                className="text-zinc-500 hover:text-white transition duration-300 hover:scale-110"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </ul>
-          <Link href="/" className="transition duration-300 hover:scale-110">
-            <EqualIcon width="48" height="48" className="text-zinc-400 hover:text-white font-extralight transition duration-300 hover:scale-110" />
-          </Link>
+            <ul className="flex gap-10 text-lg">
+              {MenuItems.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.link}
+                  className="text-zinc-500 hover:text-white transition duration-300 hover:scale-110"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </ul>
+            <Link href="/" className="transition duration-300 hover:scale-110">
+              <EqualIcon
+                width="48"
+                height="48"
+                className="text-zinc-400 hover:text-white font-extralight transition duration-300 hover:scale-110"
+              />
+            </Link>
           </div>
         </div>
       </nav>
     </div>
   );
 }
-

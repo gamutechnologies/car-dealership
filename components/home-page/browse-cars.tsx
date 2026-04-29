@@ -5,7 +5,9 @@ export default function BrowseCarsSection() {
     <section className="min-h-screen flex items-start justify-center relative overflow-hidden bg-black bg-[url(/images/browse-cars-bg.png)] bg-cover bg-center">
       <div className="mt-28">
         <div className="flex flex-col items-center">
-          <h2 className="text-5xl text-zinc-300 font-bold mb-4">Drive Beyond Expectations.</h2>
+          <h2 className="text-5xl text-zinc-300 font-bold mb-4">
+            Drive Beyond Expectations.
+          </h2>
           <div className="max-w-2xl items-center justify-center text-center mb-4">
             <p className="text-md text-zinc-400 font-medium">
               Embrace the art of refined peformance lot LuxeAuto guide you to
