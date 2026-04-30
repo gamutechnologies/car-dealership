@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <div className="">
       <nav className="fixed top-0 w-full flex items-center justify-around py-4 px-24 bg-black/30 backdrop-blur-md z-50">
-        <div className="border-b-2 border-b-zinc-700 w-[80%] flex items-center justify-between">
+        <div className="border-b-2 border-b-zinc-700 w-7xl flex items-center justify-between">
           <Link href="/" className="transition duration-300 hover:scale-110">
             <Image
               src="/logo-header.svg"
