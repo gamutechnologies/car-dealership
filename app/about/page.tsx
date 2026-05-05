@@ -1,11 +1,30 @@
-import Image from "next/image";
+import HeroSection from "@/components/about/hero";
+import OurStory from "@/components/about/our-story";
+import OurMission from "@/components/about/our-mission";
+import OurFuture from "@/components/about/our-future";
+import Experts from "@/components/about/experts";
+import BrowseCarsSection from "@/components/about/browse-cars";
 
-export default function ABout() {
+export default function About() {
   return (
-    <section className="min-h-screen w-full relative bg-gradient-b from-black via-white to-black">
-      <div className="flex flex-col flex-1 items-center justify-cente font-sans">
-        About Page
-      </div>
-    </section>
+    <main className="bg-black text-white">
+      {/* Hero Section*/}
+      <HeroSection />
+
+      {/* Our Story Section */}
+      <OurStory />
+
+      {/* Our Mission Section */}
+      <OurMission />
+
+      {/* Our Future Section */}
+      <OurFuture />
+
+      {/* Experts Section */}
+      <Experts />
+
+      {/* Browse Cars Section */}
+      <BrowseCarsSection />
+    </main>
   );
 }
