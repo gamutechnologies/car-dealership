@@ -3,7 +3,7 @@ import { GlobeIcon, BadgeCheckIcon } from "lucide-react";
 
 export default function OurStory() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-black bg-[url(/images/our-story-bg.jpg)] bg-cover bg-center overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center bg-black bg-[url(/images/our-story-bg.png)] bg-cover bg-center overflow-hidden">
       <div className="min-w-7xl flex flex-col relative">
         <div className="flex flex-row justify-between items-start mb-16">
           <div className="max-w-4xl flex flex-col">
