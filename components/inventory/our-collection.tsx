@@ -31,7 +31,7 @@ const carCard = [
     color: "Frozen Silver",
     colorHex: "#e5e7eb",
     transmission: "Automatic",
-    image: "/images/rolls-royce-spectre.jpg",
+    image: "/images/rolls-royce-spectre.png",
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const carCard = [
     color: "Daytona Gray",
     colorHex: "#5a5a5a",
     transmission: "Automatic",
-    image: "/images/mclaren-750s.jpg",
+    image: "/images/mclaren-750s.png",
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ const carCard = [
     color: "Daytona Gray",
     colorHex: "#5a5a5a",
     transmission: "Automatic",
-    image: "/images/bently-continental-gt-speed.jpg",
+    image: "/images/bently-continental-gt-speed.png",
   },
   {
     id: 6,
@@ -61,7 +61,7 @@ const carCard = [
     color: "Python Green",
     colorHex: "#22c55e",
     transmission: "Automatic",
-    image: "/images/porsche-911-turbo-s.jpg",
+    image: "/images/porsche-911-turbo-s.png",
   },
 ];
 
@@ -131,8 +131,9 @@ export default function OurCollection() {
                 <Image
                   src={car.image}
                   alt={car.name}
-                  fill
-                  className="object-cover object-center"
+                  width={400}
+                  height={300}
+                  className="object-cover object-center mt-20"
                 />
               </div>
               <div className="relative z-10 mb-4 flex items-center justify-between text-xs">
