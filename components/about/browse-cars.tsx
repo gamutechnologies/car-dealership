@@ -2,7 +2,7 @@ import { MoveUpRightIcon } from "lucide-react";
 
 export default function BrowseCarsSection() {
   return (
-    <section className="min-h-screen flex items-start justify-center relative overflow-hidden bg-black bg-[url(/images/browse-cars-bg.png)] bg-cover bg-center">
+    <section className="min-h-screen flex items-start justify-center relative overflow-hidden bg-black bg-[url(/images/browse-cars-bg.webp)] bg-cover bg-center">
       <div className="mt-28">
         <div className="flex flex-col items-center">
           <h2 className="text-5xl text-zinc-300 font-bold mb-4">

@@ -63,16 +63,21 @@ export default function ContactFormSection() {
                 placeholder="Your message"
               ></textarea>
             </div>
-            <input type="submit" value="Submit" className="bg-black text-yellow-500 hover:bg-yellow-500 hover:text-black transform-transition px-6 py-3 font-bold text-xl rounded-xl border border-yellow-500"  />
+            <input
+              type="submit"
+              value="Submit"
+              className="bg-black text-yellow-500 hover:bg-yellow-500 hover:text-black transform-transition px-6 py-3 font-bold text-xl rounded-xl border border-yellow-500"
+            />
           </form>
         </div>
         <div className="w-1/2">
-            <Image
-             src="/images/contact-us.png"
-             alt="Contact Us"
-             width={750}
-             height={500}
-             className="m-10" />
+          <Image
+            src="/images/contact-us.webp"
+            alt="Contact Us"
+            width={750}
+            height={500}
+            className="m-10"
+          />
         </div>
       </div>
     </section>

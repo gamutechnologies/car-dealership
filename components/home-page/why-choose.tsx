@@ -4,8 +4,8 @@ const MenuItems = [{ title: "/", subtitle: "" }];
 
 export default function WhyChooseSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black bg-[url(/images/why-choose-bg.png)] bg-cover bg-center">
-      {/* <section className="bg-black bg-[url(/images/why-choose-bg.png)] bg-cover bg-center" "bg-linear-to-r from-black to-blue-300"> */}
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black bg-[url(/images/why-choose-bg.webp)] bg-cover bg-center">
+      {/* <section className="bg-black bg-[url(/images/why-choose-bg.webp)] bg-cover bg-center" "bg-linear-to-r from-black to-blue-300"> */}
       <div className="max-w-10/12 flex flex-col flex-1 grid-cols-2 gap-10 relative">
         <div className="flex absolute top-2 left-40">
           <div className="text-5xl font-bold top-0 left-0 w-full h-full">

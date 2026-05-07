@@ -10,7 +10,7 @@ export default function HeroSection() {
       <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col items-center justify-center mt-20">
         <div className="w-full flex flex-col items-center justify-center">
           <Image
-            src="/service-hero.png"
+            src="/images/service-hero.png"
             width={3600}
             height={1800}
             alt="Car Image"

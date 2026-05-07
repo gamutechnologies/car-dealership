@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ChevronDownIcon, SearchIcon, MoveUpRightIcon } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
@@ -11,7 +12,7 @@ const carCard = [
     color: "Frozen Silver",
     colorHex: "#e5e7eb",
     transmission: "Automatic",
-    image: "/images/lamborghini-revuelto.png",
+    image: "/images/lamborghini-revuelto.webp",
   },
   {
     id: 2,
@@ -21,7 +22,7 @@ const carCard = [
     color: "Daytona Gray",
     colorHex: "#5a5a5a",
     transmission: "Automatic",
-    image: "/images/ferrari-296-gtb-black.png",
+    image: "/images/ferrari-296-gtb-black.webp",
   },
   {
     id: 3,
@@ -31,7 +32,7 @@ const carCard = [
     color: "Frozen Silver",
     colorHex: "#e5e7eb",
     transmission: "Automatic",
-    image: "/images/rolls-royce-spectre.png",
+    image: "/images/rolls-royce-spectre.webp",
   },
   {
     id: 4,
@@ -41,7 +42,7 @@ const carCard = [
     color: "Daytona Gray",
     colorHex: "#5a5a5a",
     transmission: "Automatic",
-    image: "/images/mclaren-750s.png",
+    image: "/images/mclaren-750s.webp",
   },
   {
     id: 5,
@@ -51,7 +52,7 @@ const carCard = [
     color: "Daytona Gray",
     colorHex: "#5a5a5a",
     transmission: "Automatic",
-    image: "/images/bently-continental-gt-speed.png",
+    image: "/images/bently-continental-gt-speed.webp",
   },
   {
     id: 6,
@@ -61,7 +62,7 @@ const carCard = [
     color: "Python Green",
     colorHex: "#22c55e",
     transmission: "Automatic",
-    image: "/images/porsche-911-turbo-s.png",
+    image: "/images/porsche-911-turbo-s.webp",
   },
 ];
 
@@ -160,12 +161,14 @@ export default function OurCollection() {
                     {car.price}
                   </p>
                 </div>
-                <button
-                  type="button"
-                  className="flex size-10 shrink-0 items-center justify-center rounded-full border border-white/10 text-white transition-colors backdrop-blur-md bg-black/20"
-                >
-                  <MoveUpRightIcon className="size-4" />
-                </button>
+                <Link href="/overview">
+                  <button
+                    type="button"
+                    className="flex size-10 shrink-0 items-center justify-center rounded-full border border-white/10 text-white transition-colors backdrop-blur-md bg-black/20"
+                  >
+                    <MoveUpRightIcon className="size-4" />
+                  </button>
+                </Link>
               </div>
             </Card>
           ))}

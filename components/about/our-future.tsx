@@ -18,10 +18,9 @@ export default function OurFuture() {
             automotive industry.
           </p>
         </div>
-
         <div className="relative w-7xl h-120 rounded-2xl overflow-hidden">
           <Image
-            src="/images/our-future.avif"
+            src="/images/our-future.webp"
             alt="Our Future"
             fill
             className="object-cover"

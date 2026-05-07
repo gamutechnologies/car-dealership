@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { MoveUpRightIcon } from "lucide-react";
 
 export default function HeroSection() {
@@ -25,13 +26,17 @@ export default function HeroSection() {
             who demand elegance, performance, and distinction in every drive.
           </p>
           <div className="flex grid-cols-2 gap-4 mt-6">
-            <button className="bg-yellow-500 border border-black rounded-full text-black px-3 py-2 align-middle flex items-center gap-2">
-              Browse Collection <MoveUpRightIcon />
-            </button>
-            <button className="bg-transparent border border-yellow-500 rounded-full text-white px-3 py-2 align-middle flex items-center gap-2">
-              Book Test Drive
-              <MoveUpRightIcon color="#eab308" />
-            </button>
+            <Link href="/inventory">
+              <button className="bg-yellow-500 border border-black rounded-full text-black px-3 py-2 align-middle flex items-center gap-2">
+                Browse Collection <MoveUpRightIcon />
+              </button>
+            </Link>
+            <Link href="/contact">
+              <button className="bg-transparent border border-yellow-500 rounded-full text-white px-3 py-2 align-middle flex items-center gap-2">
+                Book Test Drive
+                <MoveUpRightIcon color="#eab308" />
+              </button>
+            </Link>
           </div>
         </div>
       </div>

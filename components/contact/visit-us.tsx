@@ -1,5 +1,5 @@
 import { MapPinIcon, PhoneIcon, MailIcon } from "lucide-react";
-    
+
 export default function VisitUsSection() {
   return (
     <section className="flex items-center justify-center bg-black overflow-hidden">
@@ -21,7 +21,7 @@ export default function VisitUsSection() {
           <ul className="text-lg text-zinc-300">
             <li className="flex items-center gap-4">
               <MapPinIcon size={20} />
-              1st Street, Dehiwala, CMB 10350
+              1st Street, Dehiwala, SL 10350
             </li>
             <li className="flex items-center gap-4">
               <PhoneIcon size={20} />

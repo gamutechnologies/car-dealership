@@ -52,42 +52,42 @@ const avatarCard = [
   {
     id: 1,
     name: "Joseph Vijay",
-    image: "/images/joseph-vijay.png",
+    image: "/images/joseph-vijay.webp",
   },
   {
     id: 2,
     name: "Samantha Ruth",
-    image: "/images/samantha-ruth.png",
+    image: "/images/samantha-ruth.webp",
   },
   {
     id: 3,
     name: "Mohammed Nizamdeen",
-    image: "/images/mohammed-nizamdeen.png",
+    image: "/images/mohammed-nizamdeen.webp",
   },
   {
     id: 4,
     name: "Namitha Vankawala",
-    image: "/images/namitha-vankawala.png",
+    image: "/images/namitha-vankawala.webp",
   },
   {
     id: 5,
     name: "Osama Bin Laden",
-    image: "/images/osama-bin-laden.png",
+    image: "/images/osama-bin-laden.webp",
   },
   {
     id: 6,
     name: "Adolf Hitler",
-    image: "/images/adolf-hitler.png",
+    image: "/images/adolf-hitler.webp",
   },
   {
     id: 7,
     name: "Pooja Hegde",
-    image: "/images/pooja-hegde.png",
+    image: "/images/pooja-hegde.webp",
   },
   {
     id: 8,
     name: "Ajith Kumar",
-    image: "/images/ajith-kumar.png",
+    image: "/images/ajith-kumar.webp",
   },
 ];
 
@@ -125,11 +125,11 @@ export default function TestimonialsSection() {
       <div className="min-w-7xl absolute items-center justify-center text-center flex flex-col top-1/3 ">
         <h3 className="text-white text-lg mb-5">What Our Clients Say</h3>
         <p className="text-white text-4xl font-light w-6xl">
-          "From personalized recommendations to effortless delivery, <br/> LuxeAuto
-          made every step simple, transparent, and <br/> luxurious - {" "}
+          "From personalized recommendations to effortless delivery, <br />{" "}
+          LuxeAuto made every step simple, transparent, and <br /> luxurious -{" "}
           <span className="text-white/50">
-            redefining how premium car buying should feel <br/> for discerning drivers
-            worldwide."
+            redefining how premium car buying should feel <br /> for discerning
+            drivers worldwide."
           </span>
         </p>
       </div>

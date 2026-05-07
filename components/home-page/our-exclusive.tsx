@@ -1,6 +1,7 @@
 import * as React from "react";
 import { MoveUpRightIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -19,7 +20,7 @@ const carCard = [
     color: "Frozen Silver",
     colorHex: "#e5e7eb",
     transmission: "Automatic",
-    image: "/images/lamborghini-revuelto.png",
+    image: "/images/lamborghini-revuelto.webp",
   },
   {
     id: 2,
@@ -29,7 +30,7 @@ const carCard = [
     color: "Daytona Gray",
     colorHex: "#5a5a5a",
     transmission: "Automatic",
-    image: "/images/ferrari-296-gtb-black.png",
+    image: "/images/ferrari-296-gtb-black.webp",
   },
   {
     id: 3,
@@ -39,7 +40,7 @@ const carCard = [
     color: "Frozen Silver",
     colorHex: "#e5e7eb",
     transmission: "Automatic",
-    image: "/images/rolls-royce-spectre.png",
+    image: "/images/rolls-royce-spectre.webp",
   },
   {
     id: 4,
@@ -49,7 +50,7 @@ const carCard = [
     color: "Daytona Gray",
     colorHex: "#5a5a5a",
     transmission: "Automatic",
-    image: "/images/mclaren-750s.png",
+    image: "/images/mclaren-750s.webp",
   },
   {
     id: 5,
@@ -59,7 +60,7 @@ const carCard = [
     color: "Daytona Gray",
     colorHex: "#5a5a5a",
     transmission: "Automatic",
-    image: "/images/bently-continental-gt-speed.png",
+    image: "/images/bently-continental-gt-speed.webp",
   },
   {
     id: 6,
@@ -69,7 +70,7 @@ const carCard = [
     color: "Python Green",
     colorHex: "#22c55e",
     transmission: "Automatic",
-    image: "/images/porsche-911-turbo-s.png",
+    image: "/images/porsche-911-turbo-s.webp",
   },
 ];
 
@@ -134,12 +135,14 @@ export default function OurExclusiveSection() {
                           {car.price}
                         </p>
                       </div>
-                      <button
-                        type="button"
-                        className="flex size-10 shrink-0 items-center justify-center rounded-full border border-white/10 text-white transition-colors backdrop-blur-md bg-black/20"
-                      >
-                        <MoveUpRightIcon className="size-4" />
-                      </button>
+                      <Link href="/overview">
+                        <button
+                          type="button"
+                          className="flex size-10 shrink-0 items-center justify-center rounded-full border border-white/10 text-white transition-colors backdrop-blur-md bg-black/20"
+                        >
+                          <MoveUpRightIcon className="size-4" />
+                        </button>
+                      </Link>
                     </div>
                   </Card>
                 </div>
@@ -148,9 +151,11 @@ export default function OurExclusiveSection() {
           </CarouselContent>
         </Carousel>
         <div className="absolute bottom-10 flex items-center justify-center gap-2 pb-6">
-          <button className="bg-transparent border border-yellow-500 rounded-full text-white px-4 py-2 align-middle flex items-center gap-2">
-            View All Cars <MoveUpRightIcon size={18} color="#eab308" />
-          </button>
+          <Link href="/inventory">
+            <button className="bg-transparent border border-yellow-500 rounded-full text-white px-4 py-2 align-middle flex items-center gap-2">
+              View All Cars <MoveUpRightIcon size={18} color="#eab308" />
+            </button>
+          </Link>
         </div>
       </div>
     </section>

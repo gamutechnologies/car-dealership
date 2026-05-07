@@ -21,9 +21,7 @@ export default function ServicesSection() {
                     strokeWidth={1}
                     className="text-white mb-2"
                   />
-                  <h4 className="text-lg font-semibold text-white mb-2">
-                    1st
-                  </h4>
+                  <h4 className="text-lg font-semibold text-white mb-2">1st</h4>
                   <p className="text-xs text-zinc-200">Service</p>
                 </div>
                 <div className="w-30 h-30 rounded-3xl bg-zinc-300/10 backdrop-blur-sm border border-zinc-300/20 flex flex-col items-center justify-center text-center ml-8">
@@ -32,9 +30,7 @@ export default function ServicesSection() {
                     strokeWidth={1}
                     className="text-white mb-2"
                   />
-                  <h4 className="text-lg font-semibold text-white mb-2">
-                    2nd
-                  </h4>
+                  <h4 className="text-lg font-semibold text-white mb-2">2nd</h4>
                   <p className="text-xs text-zinc-200">Service</p>
                 </div>
                 <div className="w-30 h-30 rounded-3xl bg-zinc-300/10 backdrop-blur-sm border border-zinc-300/20 flex flex-col items-center justify-center text-center ml-8">
@@ -43,9 +39,7 @@ export default function ServicesSection() {
                     strokeWidth={1}
                     className="text-white mb-2"
                   />
-                  <h4 className="text-lg font-semibold text-white mb-2">
-                    3rd
-                  </h4>
+                  <h4 className="text-lg font-semibold text-white mb-2">3rd</h4>
                   <p className="text-xs text-zinc-200">Service</p>
                 </div>
               </div>
@@ -56,9 +50,7 @@ export default function ServicesSection() {
                     strokeWidth={1}
                     className="text-white mb-2"
                   />
-                  <h4 className="text-lg font-semibold text-white mb-2">
-                    4th
-                  </h4>
+                  <h4 className="text-lg font-semibold text-white mb-2">4th</h4>
                   <p className="text-xs text-zinc-200">Service</p>
                 </div>
                 <div className="w-30 h-30 rounded-3xl bg-zinc-300/10 backdrop-blur-sm border border-zinc-300/20 flex flex-col items-center justify-center text-center ml-8">
@@ -67,9 +59,7 @@ export default function ServicesSection() {
                     strokeWidth={1}
                     className="text-white mb-2"
                   />
-                  <h4 className="text-lg font-semibold text-white mb-2">
-                    5th
-                  </h4>
+                  <h4 className="text-lg font-semibold text-white mb-2">5th</h4>
                   <p className="text-xs text-zinc-200">Service</p>
                 </div>
                 <div className="w-30 h-30 rounded-3xl bg-zinc-300/10 backdrop-blur-sm border border-zinc-300/20 flex flex-col items-center justify-center text-center ml-8">
@@ -78,9 +68,7 @@ export default function ServicesSection() {
                     strokeWidth={1}
                     className="text-white mb-2"
                   />
-                  <h4 className="text-lg font-semibold text-white mb-2">
-                    6th
-                  </h4>
+                  <h4 className="text-lg font-semibold text-white mb-2">6th</h4>
                   <p className="text-xs text-zinc-200">Service</p>
                 </div>
               </div>
@@ -88,7 +76,7 @@ export default function ServicesSection() {
           </div>
           <div className="relative w-200 h-150">
             <Image
-              src="/images/our-service.png"
+              src="/images/our-service.webp"
               alt="Our Service"
               fill
               className="object-cover rounded-3xl"
