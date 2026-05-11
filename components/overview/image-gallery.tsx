@@ -1,12 +1,18 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import { ArrowUpRightIcon } from "lucide-react";
+import Link from "next/link";
 
 export default function ImageGallerySection() {
+  const [activeImage, setActiveImage] = useState("/images/car-black.webp");
+
   return (
     <section className="min-h-screen py-20 flex flex-col items-center justify-end relative overflow-hidden bg-black">
       <div className="absolute top-0 left-0 w-full h-2/3">
         <Image
-          src="/images/car-black.webp"
+          src={activeImage}
           alt="Ferrari 296 GTB"
           fill
           className="object-cover"
@@ -14,7 +20,14 @@ export default function ImageGallerySection() {
       </div>
       <div className="min-w-7xl flex flex-col relative z-10">
         <div className="flex flex-row justify-between gap-4 mb-8">
-          <div className="relative w-52 h-28 rounded-2xl overflow-hidden border border-zinc-700">
+          <div
+            onClick={() => setActiveImage("/images/car-blue.webp")}
+            className={`relative w-52 h-28 rounded-2xl overflow-hidden ${
+              activeImage === "/images/car-blue.webp"
+                ? " border-2 border-yellow-500"
+                : "border border-zinc-700"
+            }`}
+          >
             <Image
               src="/images/car-blue.webp"
               alt="Blue Car"
@@ -22,7 +35,14 @@ export default function ImageGallerySection() {
               className="object-cover"
             />
           </div>
-          <div className="relative w-52 h-28 rounded-2xl overflow-hidden border border-zinc-700">
+          <div
+            onClick={() => setActiveImage("/images/car-red.webp")}
+            className={`relative w-52 h-28 rounded-2xl overflow-hidden ${
+              activeImage === "/images/car-red.webp"
+                ? " border-2 border-yellow-500"
+                : "border border-zinc-700"
+            }`}
+          >
             <Image
               src="/images/car-red.webp"
               alt="Red Car"
@@ -30,7 +50,14 @@ export default function ImageGallerySection() {
               className="object-cover"
             />
           </div>
-          <div className="relative w-52 h-28 rounded-2xl overflow-hidden border-2 border-yellow-500 shadow-lg shadow-yellow-500/20">
+          <div
+            onClick={() => setActiveImage("/images/car-black.webp")}
+            className={`relative w-52 h-28 rounded-2xl overflow-hidden ${
+              activeImage === "/images/car-black.webp"
+                ? " border-2 border-yellow-500"
+                : "border border-zinc-700"
+            }`}
+          >
             <Image
               src="/images/car-black.webp"
               alt="Black Car"
@@ -38,7 +65,14 @@ export default function ImageGallerySection() {
               className="object-cover"
             />
           </div>
-          <div className="relative w-52 h-28 rounded-2xl overflow-hidden border border-zinc-700">
+          <div
+            onClick={() => setActiveImage("/images/car-purple.webp")}
+            className={`relative w-52 h-28 rounded-2xl overflow-hidden ${
+              activeImage === "/images/car-purple.webp"
+                ? " border-2 border-yellow-500"
+                : "border border-zinc-700"
+            }`}
+          >
             <Image
               src="/images/car-purple.webp"
               alt="Purple Car"
@@ -46,7 +80,14 @@ export default function ImageGallerySection() {
               className="object-cover"
             />
           </div>
-          <div className="relative w-52 h-28 rounded-2xl overflow-hidden border border-zinc-700">
+          <div
+            onClick={() => setActiveImage("/images/car-white.webp")}
+            className={`relative w-52 h-28 rounded-2xl overflow-hidden ${
+              activeImage === "/images/car-white.webp"
+                ? " border-2 border-yellow-500"
+                : "border border-zinc-700"
+            }`}
+          >
             <Image
               src="/images/car-white.webp"
               alt="White Car"
@@ -54,7 +95,14 @@ export default function ImageGallerySection() {
               className="object-cover"
             />
           </div>
-          <div className="relative w-52 h-28 rounded-2xl overflow-hidden border border-zinc-700">
+          <div
+            onClick={() => setActiveImage("/images/car-orange.webp")}
+            className={`relative w-52 h-28 rounded-2xl overflow-hidden ${
+              activeImage === "/images/car-orange.webp"
+                ? " border-2 border-yellow-500"
+                : "border border-zinc-700"
+            }`}
+          >
             <Image
               src="/images/car-orange.webp"
               alt="Orange Car"
@@ -105,10 +153,12 @@ export default function ImageGallerySection() {
           </div>
           <div className="flex flex-col items-end">
             <h3 className="text-4xl font-heading text-white mb-4">$620,000</h3>
-            <button className="bg-yellow-500 text-black text-base font-medium px-8 py-2 rounded-full flex flex-row items-center gap-2">
-              Book Now
-              <ArrowUpRightIcon size={20} />
-            </button>
+            <Link href="/contact">
+              <button className="bg-yellow-500 text-black text-base font-medium px-8 py-2 rounded-full flex flex-row items-center gap-2">
+                Book Now
+                <ArrowUpRightIcon size={20} />
+              </button>
+            </Link>
           </div>
         </div>
       </div>

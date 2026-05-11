@@ -52,8 +52,8 @@ export default function FAQSection() {
   return (
     <section className="min-h-screen py-32 flex flex-col items-center relative overflow-hidden bg-black">
       <div className="w-full max-w-6xl px-8 flex flex-col gap-16 relative">
-        <div className="flex flex-row items-start justify-between w-full">
-          <h3 className="text-5xl font-semibold top-0 left-0 max-w-lg">
+        <div className="flex flex-col md:flex-row items-start justify-between w-full">
+          <h3 className="text-4xl md:text-5xl font-semibold top-0 left-0 max-w-sm md:max-w-lg">
             Your Questions, <span className="mt-3">Perfectly Answered.</span>
           </h3>
           <p className="text-sm font-semibold text-zinc-200/70 max-w-sm mt-4">
@@ -63,8 +63,8 @@ export default function FAQSection() {
           </p>
         </div>
       </div>
-      <div className="w-full mt-20">
-        <Accordion className="flex flex-col gap-2 max-w-6xl mx-auto">
+      <div className="w-full m-10 sm:mt-20">
+        <Accordion className="flex flex-col gap-2 max-w-sm sm:max-w-6xl mx-auto">
           {QandA.map((qa) => (
             <AccordionItem
               key={qa.index}

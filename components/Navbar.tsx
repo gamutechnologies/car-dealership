@@ -1,51 +1,94 @@
-import Link from "next/link";
-import { EqualIcon } from "lucide-react";
-import Image from "next/image";
+"use client";
 
-const MenuItems = [
-  { label: "Home", link: "/" },
-  { label: "Inventory", link: "/inventory" },
-  { label: "About", link: "/about" },
-  { label: "Service", link: "/service" },
-  { label: "Contact", link: "/contact" },
-];
+import Link from "next/link";
+import { EqualIcon, XIcon } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  const MenuItems = [
+    { label: "Home", link: "/" },
+    { label: "Inventory", link: "/inventory" },
+    { label: "About", link: "/about" },
+    { label: "Service", link: "/service" },
+    { label: "Contact", link: "/contact" },
+  ];
+
   return (
-    <div className="">
-      <nav className="fixed top-0 w-full flex items-center justify-around py-4 px-24 bg-black/30 backdrop-blur-md z-50">
-        <div className="border-b-2 border-b-zinc-700 w-7xl flex items-center justify-between">
-          <Link href="/" className="transition duration-300 hover:scale-110">
-            <Image
-              src="/logo-header.svg"
-              alt="Logo"
-              width={150}
-              height={50}
-              className="object-contain"
-            />
-          </Link>
-          <div className="flex items-center gap-20">
-            <ul className="flex gap-10 text-lg">
-              {MenuItems.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.link}
-                  className="text-zinc-500 hover:text-white transition duration-300 hover:scale-110"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </ul>
-            <Link href="/" className="transition duration-300 hover:scale-110">
+    <nav className="bg-black/30 backdrop-blur-md shadow-sm sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm-px-6 lg:px-8">
+        <div className="flex justify-between h-24 items-center border-b-2 border-b-zinc-700">
+          <div className="flex items-center gap-4">
+            <Link
+              href="/"
+              className="flex items-center gap-2 transition duration-300 hover:scale-110"
+            >
+              <Image
+                src="/logo-header.svg"
+                alt="Logo"
+                width={150}
+                height={50}
+                className="object-contain"
+              />
+            </Link>
+          </div>
+
+          <div className="hidden md:flex item-center space-x-6 mt-4">
+            {MenuItems.map((item) => (
+              <Link
+                href={item.link}
+                key={item.label}
+                className="text-zinc-500 hover:text-white transition duration-300 hover:scale-110"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Link
+              href="/"
+              className="ml-12 inline-block transition duration-300 hover:scale-110"
+            >
               <EqualIcon
-                width="48"
-                height="48"
+                width="36"
+                height="36"
                 className="text-zinc-400 hover:text-white font-extralight transition duration-300 hover:scale-110"
               />
             </Link>
           </div>
+
+          <div className="md:hidden flex items-center">
+            <button
+              aria-label="Toggle Menu"
+              aria-expanded={open}
+              onClick={() => setOpen(!open)}
+              className="text-zinc-400 hover:text-white transition duration-300 p-2 rounded-md focus:ring-2 focus:ring-zinc-400 focus:outline-none"
+            >
+              {open ? (
+                <XIcon width="36" height="36" />
+              ) : (
+                <EqualIcon width="36" height="36" />
+              )}
+            </button>
+          </div>
         </div>
-      </nav>
-    </div>
+
+        <div
+          className={`md:hidden ${open ? "max-h-screen" : "max-h-0"} overflow-hidden transition-[max-height] duration-600 bg-black/50 border-t border-zinc-600`}
+        >
+          <div className="px-4 pt-4 pb-6 space-y-3 ">
+            {MenuItems.map((item) => (
+              <Link
+                href={item.link}
+                key={item.label}
+                className="text-zinc-500 hover:text-white transition duration-300 hover:scale-110 block px-3 py-2 rounded-md"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 }
