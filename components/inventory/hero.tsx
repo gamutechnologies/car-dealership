@@ -3,25 +3,27 @@ import { MoveUpRightIcon } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-linear-to-b from-black from-15% via-gray-400/30 via-50% to-black to-110%">
-      <div className="w-full min-w-7xl mx-auto flex flex-col items-center justify-center relative">
-        <h1 className="absolute -top-20 text-[175px] font-extrabold text-white">
-          OUR COLLECTION
-        </h1>
-        <div className="relative z-10 flex justify-center items-center w-full">
-          <Image
-            src="/hero-image.png"
-            width={2100}
-            height={1400}
-            alt="Car Image"
-          />
-        </div>
-        <div className="absolute -bottom-40 w-full flex flex-row justify-between items-end px-16 pb-12 z-20">
-          <div className="text-7xl font-bold text-white leading-tight max-w-[40%]">
-            Engineering Luxury Refined
+    <section className="bg-black text-white w-full min-h-[75vh] md:min-h-screen flex flex-col relative pt-16 md:pt-0">
+      <div className="w-full relative mt-16 md:mt-8">
+        <Image
+          src="/inventory-bg.webp"
+          alt="Inventory Hero"
+          width={4096}
+          height={2048}
+          className="w-full h-auto object-contain"
+          priority
+        />
+        <div className="absolute bottom-0 left-0 w-full h-10 md:h-48 lg:h-64 bg-linear-to-t from-black via-black/80 to-transparent" />
+      </div>
+      <div className="w-full flex-1 bg-black flex flex-col justify-center">
+        <div className="max-w-7xl mx-auto w-full px-6 flex flex-col md:flex-row justify-between items-start md:items-end pb-16 gap-8 md:gap-8 mt-4 md:-mt-10 lg:-mt-24 z-10 relative">
+          <div className="w-full md:w-1/2">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              Engineering Luxury Refined
+            </h2>
           </div>
-          <div className="text-lg text-gray-200 max-w-[28%] text-right">
-            <p className="font-light">
+          <div className="w-full md:w-[40%] flex flex-col gap-8 md:text-left">
+            <p className="text-gray-300 font-light text-sm md:text-base">
               Browse our refined inventory of elite automobiles, each
               meticulously verified for quality, authencity, and unmatched
               sophestication.

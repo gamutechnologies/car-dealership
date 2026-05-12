@@ -77,9 +77,9 @@ const carCard = [
 export default function OurExclusiveSection() {
   return (
     <section className="min-h-screen flex items-start justify-center relative overflow-hidden bg-black">
-      <div className="min-w-7xl items-center justify-center flex flex-col gap-6 px-6 py-20">
-        <div className="w-2xl text-center">
-          <h2 className="text-white text-5xl font-semibold">
+      <div className="max-w-7xl items-center justify-center flex flex-col gap-6 px-6 py-20">
+        <div className="max-w-2xl text-center">
+          <h2 className="text-white text-4xl md:text-5xl font-semibold">
             Explore Our <br /> Exclusive Collections
           </h2>
           <p className="mt-4 text-zinc-300 text-sm">
@@ -96,7 +96,7 @@ export default function OurExclusiveSection() {
         >
           <CarouselContent>
             {carCard.map((car) => (
-              <CarouselItem className="basis-1/2 lg:basis-1/5">
+              <CarouselItem className="basis-full sm:basis-1/2 lg:basis-1/5">
                 <div className="p-1">
                   <Card
                     key={car.id}

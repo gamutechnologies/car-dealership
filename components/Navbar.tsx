@@ -17,8 +17,8 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-black/30 backdrop-blur-md shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm-px-6 lg:px-8">
+    <nav className="absolute top-0 left-0 w-full z-50 bg-black/20 backdrop-blur-md">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-24 items-center border-b-2 border-b-zinc-700">
           <div className="flex items-center gap-4">
             <Link
@@ -34,8 +34,7 @@ export default function Navbar() {
               />
             </Link>
           </div>
-
-          <div className="hidden md:flex item-center space-x-6 mt-4">
+          <div className="hidden md:flex items-center space-x-6 mt-4">
             {MenuItems.map((item) => (
               <Link
                 href={item.link}
@@ -56,7 +55,6 @@ export default function Navbar() {
               />
             </Link>
           </div>
-
           <div className="md:hidden flex items-center">
             <button
               aria-label="Toggle Menu"
@@ -72,7 +70,6 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-
         <div
           className={`md:hidden ${open ? "max-h-screen" : "max-h-0"} overflow-hidden transition-[max-height] duration-600 bg-black/50 border-t border-zinc-600`}
         >

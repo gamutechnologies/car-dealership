@@ -68,13 +68,15 @@ const carCard = [
 
 export default function OurCollection() {
   return (
-    <section className="min-h-screen bg-black py-20">
-      <div className="mx-auto w-full max-w-7xl px-6">
-        <div className="flex gap-6 flex-row items-start justify-between">
-          <h2 className="text-6xl font-bold text-white">Our Collection</h2>
-          <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 p-2">
-            <div className="relative">
-              <select className="h-9 appearance-none rounded-full border border-white/10 bg-transparent pl-4 pr-10 text-sm text-zinc-400 outline-none">
+    <section className="min-h-screen bg-black py-16 sm:py-20">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start lg:items-center justify-between">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            Our Collection
+          </h2>
+          <div className="w-full lg:w-auto flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap items-stretch sm:items-center gap-3 rounded-3xl border border-white/10 bg-white/5 p-3">
+            <div className="relative w-full sm:w-auto">
+              <select className="w-full sm:w-45 h-11 appearance-none rounded-full border border-white/10 bg-transparent pl-4 pr-10 text-sm text-zinc-400 outline-none">
                 <option value="all" className="text-black">
                   Filter By Brands
                 </option>
@@ -97,10 +99,10 @@ export default function OurCollection() {
                   Porsche
                 </option>
               </select>
-              <ChevronDownIcon className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-zinc-300" />
+              <ChevronDownIcon className="absolute right-3 top-1/2 size-4 -translate-y-1/2 text-zinc-300" />
             </div>
-            <div className="relative">
-              <select className="h-9 appearance-none rounded-full border border-white/10 bg-transparent pl-4 pr-10 text-sm text-zinc-400 outline-none">
+            <div className="relative w-full sm:w-auto">
+              <select className="w-full sm:w-42.5 h-11 appearance-none rounded-full border border-white/10 bg-transparent pl-4 pr-10 text-sm text-zinc-400 outline-none">
                 <option value="default" className="text-black">
                   Sort By Price
                 </option>
@@ -111,22 +113,21 @@ export default function OurCollection() {
                   High to Low
                 </option>
               </select>
-              <ChevronDownIcon className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-zinc-300" />
+              <ChevronDownIcon className="absolute right-3 top-1/2 size-4 -translate-y-1/2 text-zinc-300" />
             </div>
-
             <button
               type="button"
-              className="inline-flex size-9 items-center justify-center rounded-full border border-white/10 bg-black/30 text-zinc-200"
+              className="w-full sm:w-11 h-11 inline-flex items-center justify-center rounded-full border border-white/10 bg-black/30 text-zinc-200"
             >
               <SearchIcon className="size-4" />
             </button>
           </div>
         </div>
-        <div className="mt-10 grid gap-6 grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
           {carCard.map((car) => (
             <Card
               key={car.id}
-              className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-white/20 bg-linear-to-b from-black from-15% via-gray-400/30 via-50% to-black to-110% bg-white/5 p-6 min-h-112"
+              className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-white/20 bg-linear-to-b from-black from-15% via-gray-400/30 via-50% to-black to-110% bg-white/5 p-5 sm:p-6 min-h-[28rem]"
             >
               <div className="absolute inset-0">
                 <Image
@@ -134,10 +135,10 @@ export default function OurCollection() {
                   alt={car.name}
                   width={400}
                   height={300}
-                  className="object-cover object-center mt-20"
+                  className="object-contain object-center mt-16 sm:mt-20"
                 />
               </div>
-              <div className="relative z-10 mb-4 flex items-center justify-between text-xs">
+              <div className="relative z-10 mb-4 flex items-center justify-between text-xs gap-2">
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1 text-zinc-300 backdrop-blur-md">
                   <span
                     className="size-3 rounded-full ring-2 ring-white"
@@ -149,19 +150,19 @@ export default function OurCollection() {
                   {car.transmission}
                 </div>
               </div>
-              <div className="relative z-10 mt-auto flex items-end justify-between">
+              <div className="relative z-10 mt-auto flex items-end justify-between gap-4">
                 <div>
                   <div className="mb-2 inline-flex rounded-full border border-white/10 px-3 py-1 text-xs text-zinc-400 backdrop-blur-md bg-black/20">
                     {car.year}
                   </div>
-                  <h3 className="mb-1 font-medium tracking-tight text-white text-2xl w-2/3 drop-shadow-md">
-                    {car.name} {car.year}
+                  <h3 className="mb-1 font-medium tracking-tight text-white text-xl sm:text-2xl max-w-[80%] drop-shadow-md">
+                    {car.name}
                   </h3>
                   <p className="font-light text-zinc-200 drop-shadow-md">
                     {car.price}
                   </p>
                 </div>
-                <Link href="/overview">
+                <Link href="/overview" aria-label={`View ${car.name}`}>
                   <button
                     type="button"
                     className="flex size-10 shrink-0 items-center justify-center rounded-full border border-white/10 text-white transition-colors backdrop-blur-md bg-black/20"
